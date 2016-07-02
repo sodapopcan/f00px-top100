@@ -54,6 +54,7 @@ GEM
     deep_merge (1.0.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    excon (0.45.4)
     execjs (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -73,6 +74,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    multi_json (1.12.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -159,7 +161,9 @@ DEPENDENCIES
   binding_of_caller
   byebug
   config
+  excon
   factory_girl_rails
+  multi_json
   rails (= 4.2.5.1)
   rspec-rails
   sass-rails (~> 5.0)

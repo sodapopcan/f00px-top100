@@ -8,6 +8,9 @@ gem 'config'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'excon'
+gem 'multi_json'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
