@@ -1,16 +1,26 @@
 class ApiClient
-  def initialize(base_url)
-    @base_url = base_url
+  attr_reader :http
+
+  def initialize(base_url, default_query_params: {})
+    @default_query_params = default_query_params
+    @http = Excon.new(base_url, debug: Settings.api.debug)
   end
 
-  def get(path, query = {})
-    request(:get, path, query)
+  def get(query = {})
+    request('get', query: query)
   end
 
   private
 
-  def request(meth, path, body = {})
-    response = Excon.send(meth, [@base_url, path].join('/'), body)
+  def request(meth, query: {})
+    response = @http.request(
+      method: meth,
+      query: q(query)
+    )
     MultiJson.load(response.body, symbolize_keys: true)
+  end
+
+  def q(query)
+    query.merge(@default_query_params)
   end
 end

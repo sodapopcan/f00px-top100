@@ -1,2 +1,3 @@
 api:
   consumer_key: <SET ME IN config/settings.local.yml>
+  debug: false
