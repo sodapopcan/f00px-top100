@@ -1,3 +1,4 @@
 api:
+  base_url: 'https://api.500px.com/v1'
   consumer_key: <SET ME IN config/settings.local.yml>
   debug: false
