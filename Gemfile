@@ -10,6 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'excon'
 gem 'multi_json'
+gem 'virtus'
 
 group :development, :test do
   gem 'rspec-rails'
