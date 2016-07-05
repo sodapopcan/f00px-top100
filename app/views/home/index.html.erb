@@ -1,0 +1,11 @@
+<div class="top100">
+  <% @photos.each_slice(4) do |row| %>
+    <div class="row">
+      <% row.each do |photo| %>
+        <div class="photo">
+          <img src="<%= photo.image_url %>" />
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
