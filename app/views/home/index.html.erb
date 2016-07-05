@@ -1,9 +1,9 @@
-<div class="top100">
+<div class="top100 container">
   <% @photos.each_slice(4) do |row| %>
     <div class="row">
       <% row.each do |photo| %>
-        <div class="photo">
-          <img src="<%= photo.image_url %>" />
+        <div class="photo three columns">
+          <img src="<%= photo.image_url %>" class="responsive" />
         </div>
       <% end %>
     </div>
