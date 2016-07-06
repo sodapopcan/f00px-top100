@@ -4,6 +4,8 @@
       <% row.each do |photo| %>
         <div class="photo three columns">
           <img src="<%= photo.image_url %>" class="responsive" />
+          <div class="name"><%= photo.name %></div>
+          <div class="artist"><%= photo.user.fullname %></div>
         </div>
       <% end %>
     </div>
