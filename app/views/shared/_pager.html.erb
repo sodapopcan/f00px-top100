@@ -1,0 +1,12 @@
+<div class="pagination">
+  <% if @current_page != 1 %>
+    <div class="first control"><a href="<%= root_path(page: 1) %>">&laquo;</a></div>
+    <div class="prev control"><a href="<%= root_path(page: @current_page - 1) %>">&lsaquo;</a></div>
+  <% end %>
+    <div class="pages"><%= paginate(@total_pages, @current_page) %></div>
+  <% if @current_page != @total_pages %>
+    <div class="next control"><a href="<%= root_path(page: @current_page + 1) %>">&rsaquo;</a></div>
+    <div class="last control"><a href="<%= root_path(page: @current_page) %>">&raquo;</a></div>
+  <% end %>
+  </div>
+</div>
