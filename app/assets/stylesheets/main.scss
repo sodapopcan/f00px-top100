@@ -1,13 +1,48 @@
-.container {
-  margin-bottom: 1em;
-  clear: both;
+$background: #f5f5f5;
+$accentBg: #069;
+$button: lighten($background, 50%);
+
+body {
+  background-color: $background;
+  margin: 0;
+  padding: 0;
 }
 
-.top100 {
+.header {
+  background: $accentBg;
+  .logo {
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+    background-image: url(http://assetcdn.500px.org/assets/brand/wordmark@2x-a551a24f06a83d397c458890f4a65f7a.png);
+    background-size: 80px;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 40px;
+    h1 {
+      font-size: 12px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      color: $button;
+    }
+  }
+}
+
+.footer {
+  background: $accentBg;
+  height: 40px;
+}
+
+.photos {
   .photo {
     margin-bottom: 1em;
+    padding: 4px;
     .name {
       font-size: 1em;
+      font-weight: bold;
       text-align: center;
     }
     .artist {
@@ -17,9 +52,31 @@
   }
 }
 
-.pagination-wrapper {
-  position: relative;
-  .pagination {
-    text-align: right;
+.pagination {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 0.9em;
+  div {
+    display: inline-block;
+  }
+  .control {
+    a,span {
+      padding: 8px;
+      color: #f5f5f5;
+    }
+    $current: #86d8f7;
+    &.page {
+      a {
+        color: #333;
+      }
+      background: $button;
+      border-radius: 2px;
+      text-align: center;
+      &.current {
+        span { color: #333; }
+        background: $current;
+      }
+    }
   }
 }

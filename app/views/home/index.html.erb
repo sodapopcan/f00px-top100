@@ -1,15 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="six columns">
-      <h1>Top 100</h1>
-    </div>
-    <div class="six columns pagination-wrapper">
+<div class="header container">
+  <div class="row pg">
+    <div class="twelve columns">
+      <span class="logo">
+        <h1>Top 100</h1>
+      </span>
       <%= render 'shared/pager' %>
     </div>
   </div>
 </div>
 
-<div class="top100 container">
+<div class="photos container">
   <% @photos.each_slice(4) do |row| %>
     <div class="row">
       <% row.each do |photo| %>
@@ -23,9 +23,9 @@
   <% end %>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="twelve columns pagination-wrapper">
+<div class="footer container">
+  <div class="row pg">
+    <div class="twelve columns">
       <%= render 'shared/pager' %>
     </div>
   </div>
